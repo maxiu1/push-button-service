@@ -9,6 +9,7 @@ public:
 	EventTime();
 	EventTime(long int seconds, long int micros);
 	void set(long int seconds, long int micros);
+	static EventTime now();
 
 
 	EventTime operator+ (EventTime rhs);

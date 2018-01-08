@@ -17,6 +17,14 @@ EventTime::EventTime(long int seconds, long int micros)
 	normalize();
 }
 
+EventTime EventTime::now()
+{
+	struct timeval t;
+	gettimeofday(&t, 0);
+
+	return EventTime(t.tv_sec, t.tv_usec);
+}
+
 EventTime EventTime::operator+(EventTime rhs)
 {
 	EventTime ret;
