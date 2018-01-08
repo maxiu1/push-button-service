@@ -14,3 +14,6 @@ HEADERS += \
     eventtime.h \
     raspi.h
 
+DISTFILES += \
+    README.md
+
