@@ -1,4 +1,3 @@
-#include "pushbuttonservice.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,13 +6,12 @@
 #include <unistd.h> // read()
 #include <sys/time.h> // gettimeofday(...)
 
-#ifdef  __arm__
-#define RASPI
-#endif
+#include "raspi.h"
+#include "pushbuttonservice.h"
+
 
 #ifdef RASPI
 #include <pigpio.h>
-
 #endif
 
 PushButtonService* obj;

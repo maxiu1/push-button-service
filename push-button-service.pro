@@ -11,5 +11,6 @@ SOURCES += main.cpp \
 HEADERS += \
     pushbuttonservice.h \
     button.h \
-    eventtime.h
+    eventtime.h \
+    raspi.h
 

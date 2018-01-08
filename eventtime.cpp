@@ -1,5 +1,6 @@
 #include "eventtime.h"
 #include <stdio.h>
+#include <sys/time.h> // gettimeofday(...)
 
 EventTime::EventTime()
 {

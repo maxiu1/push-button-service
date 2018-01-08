@@ -1,10 +1,9 @@
 #include "button.h"
 #include <stdio.h>
-
+#include "raspi.h"
 
 #ifdef RASPI
 #include <pigpio.h>
-
 #endif
 
 
