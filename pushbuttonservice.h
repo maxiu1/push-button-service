@@ -9,7 +9,7 @@
  *
  * 4 push buttons are attached to the GPIO expansion header
  *
- * This service reads the push buttons and calls daemon mpd
+ * This service reads the push buttons and calls the mpd client mpc
  * with different parameters to controll the playback.
  */
 

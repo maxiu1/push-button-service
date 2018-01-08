@@ -155,7 +155,7 @@ bool EventTime::operator>(EventTime rhs)
 		return true;
 	}else if(seconds < rhs.seconds){
 		return false;
-	}else if((seconds > 0 && micros > rhs.micros) ||
+	}else if((seconds >= 0 && micros > rhs.micros) ||
 			 (seconds < 0 && micros < rhs.micros)){
 		return true;
 	}else{

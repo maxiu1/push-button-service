@@ -42,15 +42,19 @@ int PushButtonService::run()
 
 		if(prev->pressedEvent()){
 			printf("prev\n");
+			system("mpc prev");
 		}
 		if(pause->pressedEvent()){
 			printf("pause\n");
+			system("mpc pause");
 		}
 		if(play->pressedEvent()){
 			printf("play\n");
+			system("mpc play");
 		}
 		if(next->pressedEvent()){
 			printf("next\n");
+			system("mpc next");
 		}
 
 

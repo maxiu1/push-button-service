@@ -42,12 +42,14 @@ void Button::loop()
 		if(state == Pressed){
 			tPressed = EventTime::now();
 			pressedEdge = true;
-			printf("Button Pressed Edge\n");
+//			printf("Button Pressed Edge\n");
 		}
 		if(state == Released){
 			releasedEdge = true;
 			pressedDuration = EventTime::now()-tPressed;
-			printf("Button Released Edge\n");
+//			printf("Button Released Edge, ");
+//			printf("pressedDuration = ");
+//			pressedDuration.println();
 		}
 	}
 
@@ -56,8 +58,8 @@ void Button::loop()
 
 bool Button::pressedEvent()
 {
-	if(releasedEdge && (pressedDuration > EventTime(0, 30e3)) && (pressedDuration < EventTime(1, 0))){
-		printf("Button Pressed Event\n");
+	if(releasedEdge && (pressedDuration > EventTime(0, 30000)) && (pressedDuration < EventTime(1, 0))){
+//		printf("Button Pressed Event\n");
 		return true;
 	}
 	return false;
@@ -66,7 +68,7 @@ bool Button::pressedEvent()
 bool Button::holdEvent()
 {
 	if((state == Pressed) && ((EventTime::now()-tPressed) > EventTime(3,0))){
-		printf("Button Hold Event\n");
+//		printf("Button Hold Event\n");
 		return true;
 	}
 	return false;
