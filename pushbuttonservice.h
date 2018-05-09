@@ -22,7 +22,7 @@ public:
 	PushButtonService();
 	int run();
 
-	enum Pins {PIN_PREV=18, PIN_PAUSE=23, PIN_PLAY=24, PIN_NEXT=25}; // MCU GPIO Pin-Nr ( != pinheader pin number)
+	enum Pins {PIN_PREV=36, PIN_PAUSE=38, PIN_PLAY=33, PIN_NEXT=40}; // MCU GPIO Pin-Nr ( != pinheader pin number)
 
 	Button* prev;
 	Button* pause;
